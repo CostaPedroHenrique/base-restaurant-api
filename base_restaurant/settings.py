@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'menu',
 
     'rest_framework',
+    'drf_yasg',
 ]
 
 MIDDLEWARE = [
@@ -77,9 +78,11 @@ REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': [
         'rest_framework.authentication.SessionAuthentication'
     ],
-    # 'DEFAULT_PERMISSION_CLASSES': [
-    #     'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
-    # ],
+    'DEFAULT_SCHEMA_CLASS': 'rest_framework.schemas.coreapi.AutoSchema',
+
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.IsAuthenticatedOrReadOnly'
+    ],
 }
 
 WSGI_APPLICATION = 'base_restaurant.wsgi.application'

@@ -13,6 +13,10 @@ from .models import Group, Plate
 # Create your views here.
 
 class GroupAPIView(APIView):
+  '''
+    Api de grupos de pratos
+  '''
+  serialezer_class = GroupSerializer
   def get(self, request):
     groups = Group.objects.all()
     groupsSerializer = GroupSerializer(groups, many=True)
@@ -20,6 +24,11 @@ class GroupAPIView(APIView):
 
 
 class PlateAPIView(APIView):
+  '''
+    Api de pratos
+  '''
+
+  serialezer_class = PlateSerializer
   def get(self, request):
     plates = Plate.objects.all()
     platesSerializer = PlateSerializer(plates, many=True)
