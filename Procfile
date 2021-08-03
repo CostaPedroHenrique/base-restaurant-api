@@ -1,1 +1,1 @@
-web: gunicorn papar.wsgi
+web: gunicorn base_restaurant.wsgi
