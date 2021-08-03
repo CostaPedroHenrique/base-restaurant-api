@@ -2,3 +2,4 @@
 *.pyc
 **/*.pyc
 group_icons/
+.env
