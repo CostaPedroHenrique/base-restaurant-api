@@ -5,7 +5,7 @@ from .group import Group
 class Plate(models.Model):
   group = models.ForeignKey(
     Group,
-    name="Grupo",
+    verbose_name="Grupo",
     on_delete=models.CASCADE
   )
 

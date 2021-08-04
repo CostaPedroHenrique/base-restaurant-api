@@ -34,7 +34,7 @@ class Migration(migrations.Migration):
                 ('price', models.DecimalField(decimal_places=2, max_digits=5, verbose_name='Preço')),
                 ('available', models.BooleanField(default=True, verbose_name='Disponível')),
                 ('photo', models.ImageField(upload_to='group_icons', verbose_name='Ícone')),
-                ('Grupo', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='menu.group')),
+                ('grupo', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='menu.group')),
             ],
             options={
                 'verbose_name': 'Prato',
